@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/commons.html::head}">
+    <title>Register</title>
+</head>
+<body>
+    <div class="fill-out-forms">
+    <h2>Create a new account</h2>
+        <form th:method="POST" th:action="@{/users/register}" class = "inputs-with-submit">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="name" placeholder="Name">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="confirmPassword" placeholder="Confirm Password">
+        <button type="submit">Register!</button>
+    </form>
+    <h3>Already have an account? <a th:href="@{/users/login}">Login here</a></h3>
+    </div>
+</body>
+</html>

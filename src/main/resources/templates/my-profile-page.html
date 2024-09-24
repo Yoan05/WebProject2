@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons.html::head}">
+</head>
+<body>
+    <h2 th:text="${currentUser.getUsername()} + '\'s profile'"></h2>
+    <div class="profile-details">
+        <p>Posts quantity</p>
+        <p th:text="${currentUser.getName()}">Name</p>
+        <p th:text="${currentUser.getBio()}">Bio</p>
+        <p th:text="${currentUser.getEmail()}">Email</p>
+    </div>
+
+    <form th:action="@{/users/logout}" th:method="POST">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

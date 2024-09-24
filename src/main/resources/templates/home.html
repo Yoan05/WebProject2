@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/commons.html::head}">
+    <title>Web Project 2</title>
+</head>
+<body>
+  <div>
+    <h2>Web Project 2</h2>
+  </div>
+  <div class="home-tables">
+        <table><tr>
+            <td>dddd</td>
+            <td>dddd</td>
+            <td>dddd</td>
+        </tr></table>
+        <table class="main-content-table">
+            <tr>
+                <td>SNIMKA</td>
+                <td>Description</td>
+                <td>ddd</td>
+            </tr>
+        </table>
+        <table class="chat-table">
+            <tr>
+                <td>dddd</td>
+                <td>dddd</td>
+                <td>dddd</td>
+            </tr>
+        </table>
+  </div>
+    <nav>
+        <a th:href="@{/home}"><i class="fa-solid fa-house"></i></a>
+        <a><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a th:href="@{/posts/create}"><i class="fa-solid fa-plus"></i></a>
+        <a th:href="@{/users/my-profile}"><i class="fa-solid fa-user"></i></a>
+    </nav>
+</body>
+</html>

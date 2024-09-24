@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/commons.html::head}">
+    <title>Login</title>
+</head>
+<body>
+<div class="fill-out-forms">
+    <h2>Login:</h2>
+    <form th:action="@{/users/login}" th:method="POST" class="inputs-with-submit">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login!</button>
+    </form>
+</div>
+</body>
+</html>
